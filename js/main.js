@@ -1,17 +1,25 @@
-console.log("hello main.js");
 
-let name = "Brenda";
+const name = "Summer"; 
+
+const Header = document.querySelector("section.article__header"); 
+
+console.log(Header);
+
+Header.textContent = "Big Ol' Header";
+
+console.log("does this work", Header);
+
+const allHeaders = document.querySelectorAll(".article__header");
+console.log(allHeaders);
 
 
+for (let i = 0; i < allHeaders.length; i++){
+    allHeaders[i].classList.add("important");
 
-const sectionEl = document.querySelector(".article__section");
+}
 
-console.log("the result of sectionEl:", sectionEl);
+const asideBoxDark = document.querySelector(".aside_box--dark")
+asideBoxDark.classList.remove("dashed")
 
-const footerEl = document.querySelector(".article__footer")
-
-const smallTextEl = document.querySelector(".smallText")
-smallTextEl.classList.remove("smallText")
-smallTextEl.classList.add("largeText")
-
-console.log("what is .smallText", smallTextEl);
+const articleFooter = document.querySelector(".article__footer")
+articleFooter.classList.add("goldenrod")
